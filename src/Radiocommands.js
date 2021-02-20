@@ -5,7 +5,7 @@ import CommandEntry from './components/Commandentry';
 
 function RadioCommands() {
     return (
-        <Table striped hover>
+        <Table responsive striped hover>
             <thead>
                 <tr>
                     <th>Command</th>
