@@ -7,6 +7,7 @@ import ModCommands from './Modcommands';
 import NotFound from './NotFound';
 import MusicCommands from './Musiccommands';
 import RadioCommands from './Radiocommands';
+import FunCommands from './Funcommands';
 
 function Main() {
     return (
@@ -17,6 +18,7 @@ function Main() {
             <Route exact path='/commands/mod' component={ModCommands}></Route>
             <Route exact path='/commands/music' component={MusicCommands}></Route>
             <Route exact path='/commands/radio' component={RadioCommands}></Route>
+            <Route exact path='/commands/fun' component={FunCommands}></Route>
 
             {/* Vote Routes */}
             <Route exact path='/vote/topgg' component={() => {window.location.href = 'https://top.gg/bot/733241107277938688'; return (<></>);}} />
