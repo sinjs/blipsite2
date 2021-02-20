@@ -16,9 +16,6 @@ function Commands() {
                     <Button href="/commands/fun" className="mx-1 my-1 CommandCategory" size="lg" variant="primary">Fun</Button>
                     <Button href="/commands/other" className="mx-1 my-1 CommandCategory" size="lg" variant="primary">Other</Button>
                 </Container>
-                <Container className="mt-2 CommandAll">
-                    <Button href="/commands/all" className="mx-1 CommandCategory" size="lg" variant="link">All</Button>
-                </Container>
             </Container>
         </div>
     );

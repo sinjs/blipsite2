@@ -23,7 +23,6 @@ function NavBar() {
                             <NavDropdown.Item href="/commands/radio">Radio</NavDropdown.Item>
                             <NavDropdown.Item href="/commands/fun">Fun</NavDropdown.Item>
                             <NavDropdown.Item href="/commands/other">Other</NavDropdown.Item>
-                            <NavDropdown.Item href="/commands/all">All</NavDropdown.Item>
                         </NavDropdown>
                         <Nav.Link href="/vote">Vote</Nav.Link>
                     </Nav>
