@@ -26,7 +26,7 @@ function NavBar() {
                         </NavDropdown>
                         <Nav.Link href="/vote">Vote</Nav.Link>
                     </Nav>
-                    <Button href="//invite.blip-bot.cf" variant="success">Invite now!</Button>
+                    <Button href="//invite.blip-bot.cf" role="button" name="invbtn" variant="success">Invite now!</Button>
                 </Navbar.Collapse>
             </Navbar>
         </div>
