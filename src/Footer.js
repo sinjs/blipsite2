@@ -26,7 +26,7 @@ class Footer extends React.Component {
                 <>
                     <Jumbotron className="bg-light text-muted text-center m-0" style={{borderRadius: 0}}>
                         Copyright &copy; Agent_Mighty and Sin<br />
-                        View on <a href="https://github.com/sinmineryt/blipsite2" target="_blank">GitHub</a><br></br>
+                        View on <a rel="noreferrer" href="https://github.com/sinmineryt/blipsite2" target="_blank">GitHub</a><br></br>
                         {this.state.servers}
                     </Jumbotron>
                 </>
@@ -37,7 +37,7 @@ class Footer extends React.Component {
             <>
                 <Jumbotron className="bg-light text-muted text-center m-0" style={{borderRadius: 0}}>
                     Copyright &copy; Agent_Mighty and Sin<br />
-                    View on <a href="https://github.com/sinmineryt/blipsite2" target="_blank">GitHub</a><br></br>
+                    View on <a rel="noreferrer" href="https://github.com/sinmineryt/blipsite2" target="_blank">GitHub</a><br></br>
                 </Jumbotron>
             </>);
     }
