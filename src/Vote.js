@@ -7,7 +7,7 @@ import Container from 'react-bootstrap/Container';
 function Vote() {
     return (
         <div className="Vote">
-            <Container className="text-center mt-5">
+            <Container className="text-center my-5">
                 <h1>Vote for Blip</h1>
                 <p style={{fontSize: 20 + 'px'}} className="text-muted lead">If you want to support Blip, upvote it on (one of) the following Botlists!</p>
                 <Container className="mt-4 CommandCategoies">

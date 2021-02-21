@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 function Commands() {
     return (
         <div className="Commands">
-            <Container className="text-center mt-5">
+            <Container className="text-center my-5">
                 <h1>Blip Commands</h1>
                 <p style={{fontSize: 20 + 'px'}} className="text-muted lead">Please select a category</p>
                 <Container className="mt-4 CommandCategoies">
