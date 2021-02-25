@@ -43,7 +43,10 @@ function Main() {
             <Redirect from="/fun-commands.html" to="/commands/fun" />
             <Redirect from="/other-commands.html" to="/commands/other" />
             <Redirect from="/about.html" to="/about" />
-
+            <Redirect from="/moderation-commands" to="/commands/mod" />
+            <Redirect from="/music-commands" to="/commands/music" />
+            <Redirect from="/fun-commands" to="/commands/fun" />
+            <Redirect from="/other-commands" to="/commands/other" />
 
             {/* Error Routes */}
             <Route component={NotFound}></Route>
