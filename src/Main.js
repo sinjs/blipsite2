@@ -34,6 +34,17 @@ function Main() {
             <Route exact path='/vote/paradise' component={() => {window.location.href = 'https://paradisebots.net/bots/733241107277938688'; return (<></>);}} />
             <Route exact path='/vote/infbl' component={() => {window.location.href = 'https://infinitybotlist.com/bots/733241107277938688'; return (<></>);}} />
 
+	    {/* Redirect Routes */}
+	    <Redirect from="/commands.html" to="/commands" />
+            <Redirect from="/vote.html" to="/vote" />
+            <Redirect from="/moderation-commands.html" to="/commands/mod" />
+            <Redirect from="/music-commands.html" to="/commands/music" />
+            <Redirect from="/radio-commands.html" to="/commands/radio" />
+            <Redirect from="/fun-commands.html" to="/commands/fun" />
+            <Redirect from="/other-commands.html" to="/commands/other" />
+            <Redirect from="/about.html" to="/about" />
+
+
             {/* Error Routes */}
             <Route component={NotFound}></Route>
         </Switch>
