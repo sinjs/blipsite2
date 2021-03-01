@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 
 import Home from './Home';
 import Commands from './Commands';
@@ -33,6 +33,20 @@ function Main() {
             <Route exact path='/vote/dlabs' component={() => {window.location.href = 'https://bots.discordlabs.org/bot/733241107277938688'; return (<></>);}} />
             <Route exact path='/vote/paradise' component={() => {window.location.href = 'https://paradisebots.net/bots/733241107277938688'; return (<></>);}} />
             <Route exact path='/vote/infbl' component={() => {window.location.href = 'https://infinitybotlist.com/bots/733241107277938688'; return (<></>);}} />
+
+	    {/* Redirect Routes */}
+	    <Redirect from="/commands.html" to="/commands" />
+            <Redirect from="/vote.html" to="/vote" />
+            <Redirect from="/moderation-commands.html" to="/commands/mod" />
+            <Redirect from="/music-commands.html" to="/commands/music" />
+            <Redirect from="/radio-commands.html" to="/commands/radio" />
+            <Redirect from="/fun-commands.html" to="/commands/fun" />
+            <Redirect from="/other-commands.html" to="/commands/other" />
+            <Redirect from="/about.html" to="/about" />
+            <Redirect from="/moderation-commands" to="/commands/mod" />
+            <Redirect from="/music-commands" to="/commands/music" />
+            <Redirect from="/fun-commands" to="/commands/fun" />
+            <Redirect from="/other-commands" to="/commands/other" />
 
             {/* Error Routes */}
             <Route component={NotFound}></Route>
