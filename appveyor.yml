@@ -1,15 +1,11 @@
-# Test against the latest version of this Node.js version
-environment:
-  nodejs_version: "15"
-
-# Install scripts. (runs after repo cloning)
+version: 1.0.{build}
+build_cloud: Docker
+image: Linux
 install:
-  # install modules
-  - npm install
-
-# Post-install test scripts.
-build:
-  # Output useful info for debugging.
-  - node --version
-  - npm --version
-  - npm run build
+- sh: npm install
+cache: node_modules
+build_script:
+- sh: npm run build
+test: off
+deploy: off
+...
