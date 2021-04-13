@@ -8,4 +8,7 @@ build_script:
 - sh: npm run build
 test: off
 deploy: off
+skip_commits:
+  message: /\[CI-ignore\]/
+
 ...
