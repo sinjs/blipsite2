@@ -1,14 +1,11 @@
 version: 1.0.{build}
 build_cloud: pene Docker
 image: Linux
-cache: ./node_modules
 install:
 - sh: npm install
+cache: node_modules > package.json
 build_script:
 - sh: npm run build
 test: off
 deploy: off
-skip_commits:
-  message: /\[CI-ignore\]/
-
 ...
