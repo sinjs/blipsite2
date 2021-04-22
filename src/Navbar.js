@@ -10,7 +10,7 @@ function NavBar() {
         <div className="Navbar">
             <Navbar bg="dark" variant="dark" expand="lg" className="">
                 <Navbar.Brand href="/">
-                    <img alt="" src="/msblip.png" width="32" height="32" className="d-inline-block align-top mr-3 bliplogo" />
+                    <img alt="" src="/blip.png" width="32" height="32" className="d-inline-block align-top mr-3 bliplogo" />
                     Blip Bot
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
