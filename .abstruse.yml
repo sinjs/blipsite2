@@ -2,18 +2,11 @@ image: ubuntu:focal
 
 matrix:
   -
-    env: SCRIPT=test NODE_VERSION=10
-    image: ubuntu:trusty
-  -
-    env: SCRIPT=test NODE_VERSION=12
-  -
-    env: SCRIPT=test NODE_VERSION=14
-  -
     env: SCRIPT=test NODE_VERSION=15
     image: ubuntu:groovy
   -
     env: SCRIPT=lint NODE_VERSION=15
-    image: ubuntu:latest
+    image: ubuntu
 
 before_install:
   - apt update && apt install -y wget
