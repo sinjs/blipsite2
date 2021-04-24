@@ -14,7 +14,7 @@ install:
   - yarn install
 
 script:
-  - if [[ "$SCRIPT" ]]; then yarn run $SCRIPT; fi
+  - if [[ "$SCRIPT" ]]; then CI=true yarn run $SCRIPT -- --watchAll=false; fi
   - yarn run build
 
 cache:
