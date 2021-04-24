@@ -1,0 +1,32 @@
+image: ubuntu:focal
+
+matrix:
+  -
+    env: SCRIPT=test NODE_VERSION=10
+    image: ubuntu:trusty
+  -
+    env: SCRIPT=test NODE_VERSION=12
+  -
+    env: SCRIPT=test NODE_VERSION=14
+  -
+    env: SCRIPT=test NODE_VERSION=15
+    image: ubuntu:groovy
+  -
+    env: SCRIPT=lint NODE_VERSION=15
+    image: ubuntu:latest
+
+before_install:
+  - apt update && apt install -y wget
+  - wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+  - nvm install $NODE_VERSION
+  - npm i -g yarn
+
+install:
+  - yarn install
+
+script:
+  - if [[ "$SCRIPT" ]]; then yarn run $SCRIPT; fi
+  - yarn run build
+
+cache:
+  - node_modules
