@@ -6,7 +6,7 @@ matrix:
     image: ubuntu:groovy
   -
     env: SCRIPT=lint NODE_VERSION=15
-    image: ubuntu
+    image: docker.io/ubuntu
 
 before_install:
   - apt update && apt install -y wget
