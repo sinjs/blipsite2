@@ -1,8 +1,7 @@
 image: ubuntu:focal
 
 matrix:
-  -
-    env: SCRIPT=test NODE_VERSION=15
+  - env: SCRIPT=test NODE_VERSION=15
 
 before_install:
   - apt update && apt install -y wget
