@@ -1,6 +1,6 @@
 import React from "react";
 
-function CommandEntry(props) {
+function CommandEntry(props: { command: string; desc: string; usage: string }) {
   return (
     <tr>
       <td>{props.command}</td>
