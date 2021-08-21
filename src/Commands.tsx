@@ -3,7 +3,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
 
-function Commands() {
+function Commands(): JSX.Element {
   return (
     <div className="Commands">
       <Container className="text-center my-5">

@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 
 import "./404.css";
 
-function NotFound() {
+function NotFound(): JSX.Element {
   return (
     <>
       <Container fluid className="fcont">

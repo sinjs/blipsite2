@@ -9,7 +9,7 @@ import RadioCommands from "./Radiocommands";
 import CommandEntry from "./components/Commandentry";
 import { BrowserRouter } from "react-router-dom";
 
-function __testnull__() {
+function nullWorks() {
   return null;
 }
 
@@ -23,8 +23,8 @@ test("renders navigation", () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test("is __testnull__ null", () => {
-  expect(__testnull__()).toBeNull();
+test("is nullWorks null", () => {
+  expect(nullWorks()).toBeNull();
 });
 
 test("is the navbar rendering", () => {

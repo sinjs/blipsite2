@@ -3,7 +3,7 @@ import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 
-function Vote() {
+function Vote(): JSX.Element {
   return (
     <div className="Vote">
       <Container className="text-center my-5">

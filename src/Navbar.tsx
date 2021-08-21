@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavDropdown } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-function NavBar() {
+function NavBar(): JSX.Element {
   return (
     <div className="Navbar">
       <Navbar bg="dark" variant="dark" expand="lg" className="">
@@ -23,11 +23,7 @@ function NavBar() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown
-              href="/commands"
-              title="Commands"
-              id="navi-dropdown-cmds"
-            >
+            <NavDropdown title="Commands" id="navi-dropdown-cmds">
               <NavDropdown.Item href="/commands/mod">
                 Moderation
               </NavDropdown.Item>
