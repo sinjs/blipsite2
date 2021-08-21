@@ -1,55 +1,27 @@
 import React from "react";
-
 import axios from "axios";
-
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 class Footer extends React.Component {
-  state = {};
+  state: { servers?: number };
 
-  setStateAsync(state) {
-    return new Promise((resolve) => {
-      this.setState(state, resolve);
-    });
+  constructor(props: Record<string, never>) {
+    super(props);
+    this.state = {};
   }
 
-  async componentDidMount() {
+  async componentDidMount(): Promise<void> {
     const response = await axios.get(
       "https://sinmineryt.ga/api/blip-server-count.php",
       { responseType: "json" }
     );
-    const Servers = response.data.servers;
 
-    await this.setStateAsync({
-      servers: "Blip is currently in " + Servers + " Servers",
+    await this.setState({
+      servers: response.data.servers,
     });
   }
 
-  render() {
-    if (this.state.servers) {
-      return (
-        <>
-          <Jumbotron
-            className="bg-light text-muted text-center m-0"
-            style={{ borderRadius: 0 }}
-          >
-            Copyright &copy; Agent_Mighty and Sin
-            <br />
-            View on{" "}
-            <a
-              rel="noreferrer"
-              href="https://github.com/sinmineryt/blipsite2"
-              target="_blank"
-            >
-              GitHub
-            </a>
-            <br></br>
-            {this.state.servers}
-          </Jumbotron>
-        </>
-      );
-    }
-
+  render(): JSX.Element {
     return (
       <>
         <Jumbotron
@@ -67,6 +39,8 @@ class Footer extends React.Component {
             GitHub
           </a>
           <br></br>
+          {this.state.servers &&
+            `Blip is currently in ${this.state.servers} servers`}
         </Jumbotron>
       </>
     );
