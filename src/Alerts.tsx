@@ -3,36 +3,33 @@ import Alert from "react-bootstrap/Alert";
 import axios from "axios";
 
 class Alerts extends React.Component {
-  state = {};
+  state: { exists?: boolean; heading?: string; text?: string };
 
-  setStateAsync(state: { exists?: boolean; heading?: string; text?: string }) {
-    return new Promise((resolve: () => void) => {
-      this.setState(state, resolve);
-    });
+  constructor(props: Record<string, never>) {
+    super(props);
+    this.state = {};
   }
 
-  async componentDidMount() {
+  async componentDidMount(): Promise<void> {
     const response = await axios.get("https://sinmineryt.ga/blip-status.json", {
       responseType: "json",
     });
-    const AlertExists = response.data.exists;
-    const AlertHeading = response.data.heading;
-    const AlertText = response.data.text;
+    const { exists, heading, text } = response.data;
 
-    await this.setStateAsync({
-      alertExists: AlertExists,
-      alertHeading: AlertHeading,
-      alertText: AlertText,
+    await this.setState({
+      exists,
+      heading,
+      text,
     });
   }
 
-  render() {
-    if (this.state.alertExists) {
+  render(): JSX.Element {
+    if (this.state.exists) {
       return (
         <>
           <Alert variant="danger">
-            <Alert.Heading>{this.state.alertHeading}</Alert.Heading>
-            {this.state.alertText}
+            <Alert.Heading>{this.state.heading}</Alert.Heading>
+            {this.state.text}
           </Alert>
         </>
       );
