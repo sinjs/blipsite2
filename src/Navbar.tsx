@@ -23,11 +23,7 @@ function NavBar() {
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <NavDropdown
-              href="/commands"
-              title="Commands"
-              id="navi-dropdown-cmds"
-            >
+            <NavDropdown title="Commands" id="navi-dropdown-cmds">
               <NavDropdown.Item href="/commands/mod">
                 Moderation
               </NavDropdown.Item>
