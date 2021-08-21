@@ -17,5 +17,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Install depedendencies
         run: yarn --frozen-lockfile
+      - name: Lint code
+        run: CI=true yarn lint
       - name: Run tests
         run: CI=true yarn test
