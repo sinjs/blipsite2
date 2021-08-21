@@ -1,14 +1,12 @@
 import React from "react";
-
 import Alert from "react-bootstrap/Alert";
-
 import axios from "axios";
 
 class Alerts extends React.Component {
   state = {};
 
-  setStateAsync(state) {
-    return new Promise((resolve) => {
+  setStateAsync(state: { exists?: boolean; heading?: string; text?: string }) {
+    return new Promise((resolve: () => void) => {
       this.setState(state, resolve);
     });
   }
