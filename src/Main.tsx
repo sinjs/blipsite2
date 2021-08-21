@@ -11,7 +11,7 @@ import FunCommands from "./Funcommands";
 import OtherCommands from "./Othercommands";
 import Vote from "./Vote";
 
-function Main() {
+function Main(): JSX.Element {
   return (
     <Switch>
       {/* Page Routes */}

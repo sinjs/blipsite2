@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavDropdown } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
-function NavBar() {
+function NavBar(): JSX.Element {
   return (
     <div className="Navbar">
       <Navbar bg="dark" variant="dark" expand="lg" className="">

@@ -3,7 +3,7 @@ import React from "react";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 
-function Home() {
+function Home(): JSX.Element {
   return (
     <>
       <Jumbotron className="bg-dark text-light m-0" style={{ borderRadius: 0 }}>

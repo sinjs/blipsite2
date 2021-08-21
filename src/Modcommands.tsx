@@ -3,7 +3,7 @@ import React from "react";
 import Table from "react-bootstrap/Table";
 import CommandEntry from "./components/Commandentry";
 
-function ModCommands() {
+function ModCommands(): JSX.Element {
   return (
     <Table responsive striped hover>
       <thead>

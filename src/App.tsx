@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import Alerts from "./Alerts";
 import Footer from "./Footer";
 
-function App() {
+function App(): JSX.Element {
   return (
     <div className="Application">
       <Navbar />
