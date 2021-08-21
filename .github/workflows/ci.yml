@@ -1,0 +1,21 @@
+name: GitHub Actions Demo
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install depedendencies
+        run: yarn --frozen-lockfile
+      - name: Build
+        run: yarn build
+  test:
+    runs-on: ubuntu_latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Install depedendencies
+        run: yarn --frozen-lockfile
+      - name: Run tests
+        run: CI=true yarn test
