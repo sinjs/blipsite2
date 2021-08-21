@@ -1,13 +1,13 @@
 .fcont {
-    display: grid;
-    height: 91vh;
+  display: grid;
+  height: 91vh;
 }
 
 .Center-Container {
-    margin: auto;
-    text-align: center;
+  margin: auto;
+  text-align: center;
 }
 
 .NotFoundBtn {
-    margin-top: 20px;
+  margin-top: 20px;
 }
