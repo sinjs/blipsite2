@@ -45,6 +45,14 @@ function Commands() {
             Fun
           </Button>
           <Button
+            href="/commands/slash"
+            className="mx-1 my-1 CommandCategory"
+            size="lg"
+            variant="primary"
+          >
+            Slash Commands
+          </Button>
+          <Button
             href="/commands/other"
             className="mx-1 my-1 CommandCategory"
             size="lg"
