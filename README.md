@@ -1,5 +1,11 @@
 # Blip Website v2
 
+---
+
+### !!! SITE IS DOWN !!!
+
+---
+
 The new version of blip-bot.cf.
 
 ![Travis Build Status](https://img.shields.io/travis/com/sinmineryt/blipsite2/main?style=for-the-badge)
